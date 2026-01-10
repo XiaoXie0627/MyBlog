@@ -31,6 +31,9 @@ if (footerConfig.enable) {
 		}
 	}
 }
+// 删除页脚内容 <br>换行符
+// <a class="transition link text-[var(--primary)] font-medium" href={url('atom/')} onclick={`event.preventDefault(); navigateToPage('${url('atom/')}')`}>Atom</a> /
+// <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('sitemap-index.xml')}>Sitemap</a><br>
 ---
 
 <!--<div class="border-t border-[var(&#45;&#45;primary)] mx-16 border-dashed py-8 max-w-[var(&#45;&#45;page-width)] flex flex-col items-center justify-center px-6">-->
@@ -42,13 +45,9 @@ if (footerConfig.enable) {
             <div class="mb-2" set:html={customFooterHtml}></div>
         )}
         &copy; <span id="copyright-year">{currentYear}</span> {profileConfig.name}. All Rights Reserved. /
-        <a class="transition link text-[var(--primary)] font-medium" href={url('rss/')} onclick={`event.preventDefault(); navigateToPage('${url('rss/')}')`}>RSS</a> /
-		<a class="transition link text-[var(--primary)] font-medium" href={url('atom/')} onclick={`event.preventDefault(); navigateToPage('${url('atom/')}')`}>Atom</a> /
-        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('sitemap-index.xml')}>Sitemap</a><br>
+        <a class="transition link text-[var(--primary)] font-medium" href={url('rss/')} onclick={`event.preventDefault(); navigateToPage('${url('rss/')}')`}>RSS</a><br>
         Powered by
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://astro.build">Astro</a> &
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/matsuzaka-yuki/mizuki">Mizuki</a>&nbsp; Version <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/matsuzaka-yuki/mizuki">7.6.5</a><br>
-        
-
     </div>
 </div>

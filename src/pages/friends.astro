@@ -20,6 +20,7 @@ if (!friendsPost) {
 }
 
 const { Content } = await render(friendsPost);
+// 随机获取友链排列顺序的数组
 const friendsList = getShuffledFriendsList();
 
 // 获取所有标签
