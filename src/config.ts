@@ -241,7 +241,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
-		{
+/*		{
 			name: "Links",
 			url: "/links/",
 			icon: "material-symbols:link",
@@ -265,7 +265,7 @@ export const navBarConfig: NavBarConfig = {
 					icon: "mdi:git",
 				},
 			],
-		},
+		},*/
 		{
 			name: "My",
 			url: "/content/",
