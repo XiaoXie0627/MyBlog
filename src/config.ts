@@ -180,12 +180,20 @@ export const siteConfig: SiteConfig = {
 	font: {
 		// 注意：自定义字体需要在 src/styles/main.css 中引入字体文件
 		// 注意：字体子集优化功能目前仅支持 TTF 格式字体,开启后需要在生产环境才能看到效果,在Dev环境下显示的是浏览器默认字体!
-		asciiFont: {
+		/*asciiFont: {
 			// 英文字体 - 优先级最高
 			// 指定为英文字体则无论字体包含多大范围，都只会保留 ASCII 字符子集
 			fontFamily: "ZenMaruGothic-Medium",
 			fontWeight: "400",
 			localFonts: ["ZenMaruGothic-Medium.ttf"],
+			enableCompress: true, // 启用字体子集优化，减少字体文件大小
+		},*/
+		asciiFont: {
+			// 英文字体 - 优先级最高
+			// 指定为英文字体则无论字体包含多大范围，都只会保留 ASCII 字符子集
+			fontFamily: "JetBrainsMono-Regular",
+			fontWeight: "400",
+			localFonts: ["JetBrainsMono-Regular.ttf"],
 			enableCompress: true, // 启用字体子集优化，减少字体文件大小
 		},
 /*		cjkFont: {
@@ -437,11 +445,12 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 };
 
 export const footerConfig: FooterConfig = {
-	enable: false, // 是否启用Footer HTML注入功能
-	customHtml: "", // HTML格式的自定义页脚信息，例如备案号等，默认留空
+	enable: true, // 是否启用Footer HTML注入功能
+	customHtml: "<p>备案号：<a href=\"https://beian.miit.gov.cn/\">桂ICP备2025059598号</a></p>", // HTML格式的自定义页脚信息，例如备案号等，默认留空
 	// 也可以直接编辑 FooterConfig.html 文件来添加备案号等自定义内容
 	// 注意：若 customHtml 不为空，则使用 customHtml 中的内容；若 customHtml 留空，则使用 FooterConfig.html 文件中的内容
 	// FooterConfig.html 可能会在未来的某个版本弃用
+	// 桂ICP备2025059598号-1
 };
 
 /**
